@@ -1,0 +1,45 @@
+/* components/BurgerBuilder/BurgerPreview.css */
+.burger-preview {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    position: relative;
+  }
+  
+  .burger-preview img {
+    width:250px; /* Set a consistent width for all images */
+    height: auto; /* Maintain aspect ratio */
+  }
+  
+  .patty-ingredient {
+    position: relative;
+    margin-top: -42px; /* Adjust this value to control the overlap */
+    margin-bottom: -42px;
+    object-fit: cover;
+    transform: scaleY(0.5);
+  }
+
+  .egg-ingredient {
+    position: relative;
+    margin-top: -22px; /* Adjust this value to control the overlap */
+    margin-bottom: -22px;
+    object-fit: cover;
+    transform: scaleY(0.8);
+  }
+
+  .bacon-ingredient {
+    position: relative;
+    margin-top: -12px; /* Adjust this value to control the overlap */
+    margin-bottom: -12px;
+    object-fit: cover;
+    transform: scaleY(1);
+  }
+  
+  .bun-top,
+  .bun-bottom {
+    z-index: 0;
+    position: relative;
+    margin-top: -8px
+  }
+
+  
