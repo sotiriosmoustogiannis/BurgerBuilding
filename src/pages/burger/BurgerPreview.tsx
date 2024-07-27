@@ -1,14 +1,11 @@
-// components/BurgerBuilder/BurgerPreview.tsx
-import React, { useEffect, useRef, useState } from "react";
 import { Ingredient } from "../../interfaces/burgerType";
+import appConfig from "../../configs/appConfig";
 import "./BurgerPreview.css";
 
 interface BurgerPreviewProps {
   ingredients: Ingredient[];
   onIngredientClick: (index: number) => void;
 }
-
-const API_BASE_URL = "https://react-interview.xm.com";
 
 const BurgerPreview: React.FC<BurgerPreviewProps> = ({
   ingredients,
@@ -23,7 +20,7 @@ const BurgerPreview: React.FC<BurgerPreviewProps> = ({
       <div className="burger-preview">
         <img
           className="bun-top"
-          src={`${API_BASE_URL}/img/bun_top.png`}
+          src={`${appConfig.API_BASE_URL}/img/bun_top.png`}
           alt="Top Bun"
         />
         {ingredients.map((ingredient, index) => (
@@ -37,14 +34,14 @@ const BurgerPreview: React.FC<BurgerPreviewProps> = ({
                 ? "bacon-ingredient"
                 : "egg-ingredient"
             }
-            src={`${API_BASE_URL}/img/${ingredient.src}`}
+            src={`${appConfig.API_BASE_URL}/img/${ingredient.src}`}
             alt={ingredient.name}
             onClick={() => onIngredientClick(index)}
           />
         ))}
         <img
           className="bun-bottom"
-          src={`${API_BASE_URL}/img/bun_bottom.png`}
+          src={`${appConfig.API_BASE_URL}/img/bun_bottom.png`}
           alt="Bottom Bun"
         />
       </div>
